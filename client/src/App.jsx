@@ -6,7 +6,7 @@ import Hero from './components/Hero'
 function App() {
   return (
     <div className='w-screen'>
-      <div className="h-screen">
+      <div className="h-screen text-white">
         <Header />
         <Hero />
       </div>
