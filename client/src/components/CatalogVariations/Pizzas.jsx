@@ -7,25 +7,25 @@ function Pizzas() {
       <Card
         image={'Images/Pizza/pepperoni.png'}
         name={'Pepperoni pizza'}
-        price={'$ 14'}
+        price={['14', '16', '18']}
         isPizza
       />
       <Card
         image={'Images/Pizza/cheese.png'}
         name={'Cheese Pizza'}
-        price={'$ 12'}
+        price={['12', '15', '18']}
         isPizza
       />
       <Card
         image={'Images/Pizza/sweet.png'}
         name={'Sweet Pizza'}
-        price={'$ 16'}
+        price={['16', '20', '23']}
         isPizza
       />
       <Card
         image={'Images/Pizza/meat.png'}
         name={'Meat Pizza'}
-        price={'$ 16'}
+        price={['16', '20', '24']}
         isPizza
       />
     </>

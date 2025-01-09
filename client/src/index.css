@@ -42,6 +42,7 @@
   padding: 0.5px 1.2rem;
   border-radius: 999px;
   cursor: pointer;
+  transition-duration: 400ms;
 }
 
 .text-white {

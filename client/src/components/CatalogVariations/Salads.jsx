@@ -7,22 +7,22 @@ function Salads() {
       <Card
         image={'Images/Salad/caesar.png'}
         name={'Ceasar Salad'}
-        price={'$ 10'}
+        price={'10'}
       />
       <Card
         image={'Images/Salad/greek.png'}
         name={'Greek Salad'}
-        price={'$ 11'}
+        price={'11'}
       />
       <Card
         image={'Images/Salad/caprese.png'}
         name={'Caprese Salad'}
-        price={'$ 12'}
+        price={'12'}
       />
       <Card
         image={'Images/Salad/cobb.png'}
         name={'Cobb Salad'}
-        price={'$ 14'}
+        price={'14'}
       />
     </>
   )
