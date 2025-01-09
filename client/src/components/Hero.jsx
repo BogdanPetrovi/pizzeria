@@ -4,7 +4,7 @@ import Pizza from './svgs/Pizza'
 
 function Hero() {
   return (
-    <div id='hero' className='h-[88%] relative'>
+    <div id='hero' className='h-[89%] w-full mt-[5.5%]'>
       <div className="pt-40 pl-36">
         <h1 className='capitalize font-bold inline text-5xl leading-normal'>
           It's not just a pizza, it's 
