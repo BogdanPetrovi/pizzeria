@@ -19,7 +19,7 @@ function Card({image, name, price, isPizza}) {
   }
 
   return (
-    <div className='h-[550px] w-[300px] card-shadow rounded-xl flex flex-col items-center'>
+    <div className='h-[550px] w-[300px] card-shadow rounded-xl flex flex-col items-center justify-center'>
       <img src={image} alt="pizza" className='h-[250px] w-[250px]' />
       <h3 className='text-orange-400 text-2xl font-bold capitalize'>{name}</h3>
       <h5 className='max-w-[80%] text-center text-gray-500 mt-3'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint velit official.</h5> 

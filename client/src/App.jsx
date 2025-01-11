@@ -3,15 +3,18 @@ import './index.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Menu from './components/Menu'
+import { CartContextProvider } from './context/Cart'
 
 function App() {
   return (
     <div className='w-screen'>
-      <div className="h-screen text-white">
-        <Header />
-        <Hero />
-      </div>
-      <Menu />
+      <CartContextProvider >
+        <div className="h-screen text-white">
+          <Header />
+          <Hero />
+        </div>
+        <Menu />
+      </CartContextProvider>
     </div>
   )
 }
