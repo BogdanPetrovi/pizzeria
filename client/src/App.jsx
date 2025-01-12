@@ -3,7 +3,7 @@ import './index.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Menu from './components/Menu'
-import { CartContextProvider } from './context/Cart'
+import { CartContextProvider } from './context/CartContext'
 
 function App() {
   return (

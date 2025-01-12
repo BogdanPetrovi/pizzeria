@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { CartContext } from '../context/CartContext';
 
 function Card({image, name, price, isPizza}) {
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState(1);
   const [pizzaPrice, setPizzaPrice] = useState(price[0]);
+  const { setCartItems, cartItems, setIsCartOpen } = useContext(CartContext);
 
   function handleQuantity(change) {
     if(change === 'p')
@@ -16,6 +18,16 @@ function Card({image, name, price, isPizza}) {
   function handleSize(value) {
     setSize(value);
     setPizzaPrice(price[value-1]);
+  }
+
+  function addToCart(){
+    if(isPizza){
+      setCartItems([...cartItems, {name: size === 1 ? `${name} 30cm` : size === 2 ? `${name} 40cm` : `${name} 50cm`, quantity, price: pizzaPrice * quantity}])
+      setIsCartOpen(true);
+      return(0);
+    }
+    setCartItems([...cartItems, {name, quantity, price: price * quantity}])
+    setIsCartOpen(true);
   }
 
   return (
@@ -38,7 +50,7 @@ function Card({image, name, price, isPizza}) {
           <div className='bg-orange-400 rounded-full w-6 h-6 flex justify-center items-center text-white pointer' onClick={() => handleQuantity('p')}>+</div>
         </div>
       </div>
-      <button className='bg-gradient-to-r from-orange-500 to-yellow-300 mt-5 rounded-full w-[80%] h-[50px] shadow-xl font-bold text-xl text-white'>
+      <button className='bg-gradient-to-r from-orange-500 to-yellow-300 mt-5 rounded-full w-[80%] h-[50px] shadow-xl font-bold text-xl text-white' onClick={addToCart}>
         Order Now
       </button>
     </div>

@@ -3,12 +3,15 @@ import React, { createContext, useState } from 'react'
 export const CartContext = createContext();
 
 export const CartContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState('djegae');
+  const [cartItems, setCartItems] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   return <CartContext.Provider
     value={{
       cartItems,
-      setCartItems
+      setCartItems,
+      isCartOpen,
+      setIsCartOpen
     }}
   >
     {props.children}

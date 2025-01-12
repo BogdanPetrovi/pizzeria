@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 function Bag () {
+  const { isCartOpen, setIsCartOpen } = useContext(CartContext);
+
   return(
-    <div className="rounded-full bg-transparent border-2 border-[#f99a0c] h-[48px] w-[48px] flex justify-center items-center pointer">
+    <div className="rounded-full bg-transparent border-2 border-[#f99a0c] h-[48px] w-[48px] flex justify-center items-center pointer" onClick={() => setIsCartOpen(!isCartOpen)}>
       <svg
         width="30px"
         height="30px"
