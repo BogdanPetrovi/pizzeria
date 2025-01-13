@@ -15,8 +15,8 @@ function AboutUs() {
           </h3>  
         </div>    
       </div>
-      <img src="/Images/Decoration/onion.png" alt="onion" className='absolute top-[198%] left-[15%] z-20' />
-      <img src="/Images/Decoration/cabbage.png" alt="cabbage" className='absolute top-[247%] left-[75%] z-20' />
+      <img src="/Images/Decoration/onion.png" alt="onion" className='absolute top-[198%] left-[15%] z-10' />
+      <img src="/Images/Decoration/cabbage.png" alt="cabbage" className='absolute top-[247%] left-[75%] z-10' />
     </>
   )
 }
