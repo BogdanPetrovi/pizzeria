@@ -9,7 +9,7 @@ function Menu() {
   }
 
   return (
-    <div className='h-[1000px] flex flex-col items-center select-none'>
+    <div className='h-[900px] flex flex-col items-center select-none'>
       <h3 className='uppercase text-orange-400 text-xl font-semibold'>Our menu</h3>
       <h2 className='capitalize text-4xl font-bold mt-4'>Discover our menu</h2>
       <div className="flex gap-5 mt-12">

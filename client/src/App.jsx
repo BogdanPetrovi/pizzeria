@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Menu from './components/Menu'
 import { CartContextProvider } from './context/CartContext'
+import AboutUs from './components/AboutUs'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         </div>
         <Menu />
       </CartContextProvider>
+      <AboutUs />
     </div>
   )
 }

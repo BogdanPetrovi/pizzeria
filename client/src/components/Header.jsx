@@ -11,7 +11,7 @@ function Header() {
         <h4 className='pointer p-2'>Home</h4>
         <h4 className='pointer p-2'>Menu</h4>
         <h4 className='pointer p-2'>Specials</h4>
-        <h4 className='pointer p-2'>Contact Us</h4>
+        <h4 className='pointer p-2'>About Us</h4>
       </div>
       <div className='flex gap-2 relative'>
         <Bag />
