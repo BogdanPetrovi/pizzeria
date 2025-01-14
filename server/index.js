@@ -15,6 +15,16 @@ app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(express.json()); 
 
+app.get('/get-cart', (req,res) => {
+  const cart = req.cookies.cart;
+
+  if(cart){
+    res.json({cart: JSON.parse(cart)});
+  } else {
+    res.status(404).send({message: 'No cart'});
+  }
+})
+
 app.post('/update-cart', (req,res) => {
   const cookie = req.body;
 
