@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { CartContext } from '../context/CartContext';
+import cartCookie from '../api/CartCookie'
 
 function Card({image, name, price, isPizza}) {
   const [quantity, setQuantity] = useState(1);
@@ -24,8 +25,12 @@ function Card({image, name, price, isPizza}) {
     if(isPizza){
       setCartItems([...cartItems, {name: size === 1 ? `${name} 30cm` : size === 2 ? `${name} 40cm` : `${name} 50cm`, quantity, price: pizzaPrice * quantity}])
       setIsCartOpen(true);
+      const setCookie = async () => await cartCookie.post('/update-cart', [...cartItems, {name, quantity, price: price * quantity}]);
+      setCookie();
       return(0);
     }
+    const setCookie = async () => await cartCookie.post('/update-cart', [...cartItems, {name, quantity, price: price * quantity}]);
+    setCookie();
     setCartItems([...cartItems, {name, quantity, price: price * quantity}])
     setIsCartOpen(true);
   }
